@@ -345,7 +345,7 @@ body:not(#afui) .upage-outer {
     padding-left: 0px !important;
   }
 }
-@media all and (min-width: 0px) {
+@media all and (min-width: 320px) {
   .row-height-1 > .col > .content-area {
     min-height: 349px;
   }
@@ -443,7 +443,7 @@ label:empty {
 .button-icon-right {
   float: right;
 }
-@media all and (min-width: 0px) {
+@media all and (min-width: 320px) {
   .row-height-2 > .col > .content-area {
     min-height: 100px;
   }

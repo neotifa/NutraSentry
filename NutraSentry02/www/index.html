@@ -4,10 +4,10 @@
 
 	<head>
 		<link rel="stylesheet" type="text/css" href="galleria/galleria.classic.css">
-		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="cosmo/css/cosmo.min.css" class="uib-framework-theme">
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
-		<title>Your New Application</title>
+		<title>NutraSentry</title>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 		<style type="text/css">
@@ -18,7 +18,7 @@
 		<script src="intelxdk.js"></script>
 		<script type="text/javascript">
 			/* Intel native bridge is available */
-			var onDeviceReady=function(){
+			var onDeviceReady=function(){    
 			//hide splash screen
 			intel.xdk.device.hideSplashScreen();
 			};
@@ -35,9 +35,12 @@
 		<script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
 		<script type="application/javascript" src="sidebar/js/sidebar.js"></script>
 		<script type="application/javascript" src="sidebar/js/swipe.js"></script>
+		<script type="application/javascript" src="js/index_user_scripts.js"></script>
+		<script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
 	</head>
 
 	<body>
+        <script>register_event_handlers();</script>
 		<!-- content goes here-->
 		<div class="uwrap">
 			<div class="upage" id="mainpage">
@@ -65,9 +68,11 @@
 										<label class="narrow-control label-inline">Name:</label>
 										<select class="wide-control form-control" id="userList">
 											<option>Select...</option>
+											<option>Default</option>
 										</select>
 									</div>
-									<button type="button" class="btn widget uib_w_4 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="0"><i class="glyphicon glyphicon-plus button-icon-left" data-position="left"></i>New User? Click Here!</button><span class="uib_shim"></span>
+									<button class="btn widget uib_w_21 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="0" id="bLogin">Login</button>
+									<button type="button" class="btn widget uib_w_4 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="0" id="bAddNewUser"><i class="glyphicon glyphicon-plus button-icon-left" data-position="left"></i>New User? Click Here!</button><span class="uib_shim"></span>
 								</div>
 							</div>
 							<span class="uib_shim"></span>
@@ -75,9 +80,20 @@
 					</div>
 					<!-- /upage-content -->
 
-					<div class="inner-element uib_w_13 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="0" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'io':true}">
+					<div class="inner-element uib_w_13 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/left_sidebar" data-ver="0" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'oh':4}" id="sbMenu">
 						<div class="sidebar-content content-area vertical-col">
 
+							<div class="widget uib_w_14 d-margins" data-uib="media/text" data-ver="0">
+								<div class="widget-container left-receptacle"></div>
+								<div class="widget-container right-receptacle"></div>
+								<div>
+									<p>What would you like to do?</p>
+								</div>
+							</div>
+							<button class="btn widget uib_w_20 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="0" id="bViewProfile"><i class="glyphicon glyphicon-user button-icon-left" data-position="left"></i>View Your Profile</button>
+							<button class="btn widget uib_w_17 btn-default" data-uib="twitter%20bootstrap/button" data-ver="0" id="bAddRestriction" ><i class="glyphicon glyphicon-plus button-icon-left" data-position="left"></i>Add a Restriction</button>
+							<button class="btn widget uib_w_18 btn-default" data-uib="twitter%20bootstrap/button" data-ver="0" id="bCheckFood"><i class="glyphicon glyphicon-search button-icon-left" data-position="left"></i>Check a Food Item</button>
+							<button class="btn widget uib_w_19 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="0" id="bRecipeSearch"><i class="glyphicon glyphicon-search button-icon-left" data-position="left"></i>Search for a Recipe</button>
 						</div>
 					</div>
 				</div>
