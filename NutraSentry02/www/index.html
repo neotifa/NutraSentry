@@ -76,39 +76,18 @@
 
 				<div id="new_user_signup" class="upage-content vertical-col hidden">
 					<div class="table-thing widget uib_w_5 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
-						<label class="narrow-control label-top-left">Name</label>
-						<input class="wide-control form-control default" type="text" placeholder="Placeholder">
+						<label class="narrow-control label-top-left" for="tbName">Name</label>
+						<input class="wide-control form-control default" type="text" placeholder="Placeholder" id="tbName" value="enter your name here">
 					</div>
 					<div class="table-thing widget uib_w_8 d-margins" data-uib="twitter%20bootstrap/input" data-ver="1">
-						<label class="narrow-control label-top-left">User Name</label>
-						<input class="wide-control form-control default" type="text" placeholder="Placeholder">
+						<label class="narrow-control label-top-left" for="tbUserName">User Name</label>
+						<input class="wide-control form-control default" type="text" placeholder="Placeholder" id="tbUserName" value="enter new username here">
 					</div>
+					<button class="btn widget uib_w_11 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="0" id="bSubmitNewUser">Submit</button>
 
-					<div class="table-thing widget uib_w_6 d-margins" data-uib="twitter%20bootstrap/select" data-ver="0">
-						<label class="narrow-control label-top-left">Food allergies</label>
-						<select class="wide-control form-control default">
-							<option>Corn</option>
-							<option>Egg</option>
-							<option>Fish</option>
-							<option>Meat</option>
-							<option>Peanut</option>
-							<option>Shellfish</option>
-							<option>Soy</option>
-							<option>Tree Nut</option>
-							<option>Wheat</option>
-						</select>
-					</div>
-					<div class="table-thing widget uib_w_7 d-margins" data-uib="twitter%20bootstrap/select" data-ver="0">
-						<label class="narrow-control label-top-left">Dietary Restrictions</label>
-						<select class="wide-control form-control default">
-							<option>Vegetarian</option>
-							<option>Gluten Free</option>
-							<option>Low Sodium</option>
-						</select>
-					</div>
 				</div>
 
-				<div id="menu_loading" class="upage-content vertical-col left hidden">
+				<div id="menu_loading" class="upage-content vertical-col hidden">
 
 					<div class="widget uib_w_9 d-margins menu_loading" data-uib="media/text" data-ver="0">
 						<div class="widget-container left-receptacle"></div>
@@ -125,7 +104,16 @@
 						</figure>
 					</div>
 				</div>
-				<div id="meal_suggestions" class="upage-content vertical-col left hidden"></div>
+				<div id="meal_suggestions" class="upage-content vertical-col hidden"></div>
+				<div id="user_profile" class="upage-content vertical-col left hidden">
+					<div class="widget uib_w_12 d-margins text" data-uib="media/text" data-ver="0" id="tbGreeting">
+						<div class="widget-container left-receptacle"></div>
+						<div class="widget-container right-receptacle"></div>
+						<div>
+							<p>Welcome,</p>
+						</div>
+					</div>
+				</div>
 			</div>
 			<!-- /upage -->
 
