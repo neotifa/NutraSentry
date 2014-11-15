@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="topcoat/css/topcoat-mobile-dark.min.css" class="uib-framework-theme">
+        <meta charset="UTF-8">
+        <title>Blank App Designer Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's screen.
+  * Note that the meta viewport approach is being phased out in favor of the @viewport CSS rule.
+  * For a quick overview of both, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see what happens, try the app on a real device with and without a "meta viewport" tag.
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; zoom: 100% ; }                           @viewport { width: 100vw ; zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; }                                    @viewport { user-zoom: fixed ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Most third-party libraries should go here. References (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <script src="intelxdk.js"></script>
+        <!-- phantom library, needed for XDK "legacy" container api calls -->
+        <script src="cordova.js"></script>
+        <!-- phantom library, needed for Cordova api calls -->
+        <script src="xhr.js"></script>
+        <!-- phantom library, needed for XDK "legacy" container CORS -->
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/tc_subpage.js"></script>
+        <script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
+        <script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
+        <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+        <script type="application/javascript" src="sidebar/js/swipe.js"></script>
+    </head>
+
+    <body>
+        <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <div class="upage" id="mainpage">
+            <div class="upage-outer">
+                <div class="upage-outer">
+                    <div class="upage-content content-area vertical-col" id="page_42_93">
+                        <div class="widget uib_w_2 d-margins" data-uib="media/text" data-ver="0">
+                            <div class="widget-container left-receptacle"></div>
+                            <div class="widget-container right-receptacle"></div>
+                            <div>
+                                <p>Who am I working with today?</p>
+                            </div>
+                        </div>
+                        <div class="table-thing widget uib_w_3 d-margins" data-uib="topcoat/input" data-ver="0">
+                            <label class="narrow-control label-inline">Name:</label>
+                            <input class="wide-control topcoat-text-input" type="text" id="iUserName" value="User">
+                        </div>
+                        <button class="widget uib_w_4 d-margins topcoat-button" data-uib="topcoat/button" data-ver="0" id="bLogin">Submit</button>
+                    </div>
+                    <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element uib_w_5" data-uib="layout/footer" data-ver="0">
+                        <h2></h2>
+                        <div class="widget-container wrapping-col single-centered"></div>
+                        <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                        <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                    </div>
+                    <div class="inner-element uib_w_11 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/left_sidebar" data-ver="0" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'oh':5}" id="sbMenu">
+                        <div class="sidebar-thumb"></div>
+
+                        <div class="sidebar-content content-area vertical-col">
+
+                            <div class="widget uib_w_12 d-margins" data-uib="media/text" data-ver="0">
+                                <div class="widget-container left-receptacle"></div>
+                                <div class="widget-container right-receptacle"></div>
+                                <div>
+                                    <p>What would you like to do?</p>
+                                </div>
+                            </div>
+                            <button class="widget uib_w_15 d-margins topcoat-button" data-uib="topcoat/button" data-ver="0" id="bViewProfile">View Profile</button>
+                            <button class="widget uib_w_13 d-margins topcoat-button" data-uib="topcoat/button" data-ver="0" id="bAddRestriction">Add Restriction</button>
+                            <button class="widget uib_w_14 d-margins topcoat-button" data-uib="topcoat/button" data-ver="0" id="bCheckFood">Check Food</button>
+                            <button class="widget uib_w_16 d-margins topcoat-button" data-uib="topcoat/button" data-ver="0" id="bSearchForRecipe">Search for Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="userprofile" class="upage-content vertical-col hidden">
+                <div class="widget uib_w_6 d-margins" data-uib="media/text" data-ver="0" id="tbGreeting">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>Welcome, User!</p>
+                    </div>
+                </div>
+                <div class="topcoat-list__container widget uib_w_7 d-margins" data-uib="topcoat/list_group" data-ver="0" id="lgRestricitonsActive">
+                    <h3 class="topcoat-list__header">Known Restrictions:</h3>
+                    <ul class="topcoat-list">
+                        <li class="topcoat-list__item widget uib_w_10" data-uib="topcoat/list_item" data-ver="0">Placeholder Template</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="addrestriction" class="upage-content vertical-col hidden">
+                <div class="widget uib_w_21 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+                    <div class="widget-container right-receptacle"></div>
+                    <div>
+                        <p>Allergies, conditions, and restrictions:</p>
+                    </div>
+                </div>
+                <div class="table-thing widget uib_w_17 d-margins" data-uib="topcoat/switch" data-ver="0">
+                    <label class="narrow-control label-top-left">Peanut Allergy</label>
+                    <label class="wide-control-switch topcoat-switch">
+                        <input type="checkbox" class="topcoat-switch__input" id="swPeanut">
+                        <div class="topcoat-switch__toggle"></div>
+                    </label>
+                </div>
+                <div class="table-thing widget uib_w_18 d-margins" data-uib="topcoat/switch" data-ver="0">
+                    <label class="narrow-control label-top-left">Diatbeties</label>
+                    <label class="wide-control-switch topcoat-switch">
+                        <input type="checkbox" class="topcoat-switch__input" id="swDiabeties">
+                        <div class="topcoat-switch__toggle"></div>
+                    </label>
+                </div>
+                <div class="table-thing widget uib_w_19 d-margins" data-uib="topcoat/switch" data-ver="0">
+                    <label class="narrow-control label-top-left">Low Sodium</label>
+                    <label class="wide-control-switch topcoat-switch">
+                        <input type="checkbox" class="topcoat-switch__input" id="swLowSodium">
+                        <div class="topcoat-switch__toggle"></div>
+                    </label>
+                </div>
+                <div class="table-thing widget uib_w_20 d-margins" data-uib="topcoat/switch" data-ver="0">
+                    <label class="narrow-control label-top-left">Gluten-Free</label>
+                    <label class="wide-control-switch topcoat-switch">
+                        <input type="checkbox" class="topcoat-switch__input" id="swGlutenFree">
+                        <div class="topcoat-switch__toggle"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="uib-header header-bg container-group inner-element uib_w_1" data-uib="layout/header" data-ver="0" id="hPageHeader">
+            <h2>NutraSentry</h2>
+            <div class="widget-container wrapping-col single-centered"></div>
+            <div class="widget-container content-area horiz-area wrapping-col left"></div>
+            <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+    </body>
+
+</html>

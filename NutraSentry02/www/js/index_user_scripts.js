@@ -1,14 +1,17 @@
-(function()
+(function() 
 {
  "use strict";
     
-    var userName = ""
-    
+    var userName = "User";
+    var restrictionList = {};
+        
+ document.addEventListener("app.Ready", register_event_handlers, false);
+
  /*
    hook up event handlers 
  */
- function register_event_handlers()
- {
+function register_event_handlers()
+{
     
     
      /* button  bViewProfile */
@@ -35,7 +38,6 @@
         userName = ddUserName.get();
          activate_subpage("#user_profile"); 
     });
-    
-    }
- document.addEventListener("app.Ready", register_event_handlers, false);
+ }   
 })();
+    
